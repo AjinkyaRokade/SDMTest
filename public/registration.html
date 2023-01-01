@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap-4.6.2-dist/css/bootstrap.css">
+    <script src="./bootstrap-4.6.2-dist/jquery.js"></script>
+    <script src="./bootstrap-4.6.2-dist/js/bootstrap.js"></script>    <script>
+        function validatename(){
+           var name=$(`#nm`).val();
+           if(name.trim().length>0 ){
+            $(`#errnm`).html("");
+            return true;
+           }
+           $(`#errnm`).html("Enter name");
+           return false;
+        }
+
+        function validataddress(){
+            var addr=$(`#addr`).val();
+            if(addr.trim().length>0){
+                $(`#erraddr`).html("");
+                return true;
+            }
+            $(`#erraddr`).html("Enter address");
+            return false;
+
+        }
+
+       function validatedeg(){  
+        var arr1=$(":input[name=`deg`]");
+        for(var v of arr1){ 
+            if(v.checked){
+                $("#errdeg").html("");
+                return true;
+            }
+            $("#errdeg").html("Select one degree");
+            return false;
+        }
+
+       }
+        function validatedata(){
+
+            var f1=validatename();
+            var f2=validataddress();
+            var f3=validatedeg();
+            if(f1 && f2 && f3){
+            return true;
+            }
+            return false;
+        }
+
+        function enablereg(){
+            $(`#reg`).;
+        }
+    </script>
+</head>
+<body>
+    <!-- <h3 style="text-align: center;">Registration Form</h1>
+        <div style="margin: auto; width: fit-content;">
+    <fieldset>
+    <table style="column-width: 100mm;">
+    <form method="post" onsubmit="return validatedata()"> 
+    <tr>
+        <td style="width: 35mm;"><label for="nm"></label> Name</td>
+        <td><input type="text" name="name" id="nm"placeholder="Enter name" autofocus></td>
+        <td id="errnm"></td> 
+    </tr> 
+    <tr>
+        <td><label for="dt"></label> Date Of Birth</td>
+        <td><input type="date" name="DOB" id="dt" required></td> 
+    </tr>
+    <tr>
+        <td><label for="addr"></label> Address</td>
+        <td><textarea name="address" id="addr" cols="30" rows="10"></textarea></td>
+        <td id="erraddr"></td>
+    </tr>
+    <tr>
+        <td><label for="">Degree</label></td>
+        <td><input type="radio" name="deg" id="Btech" value="B.Tech"><label for="Btech">B.Tech</label>
+            <input type="radio" name="deg" id="B.Sc" value="B.Sc"><label for="B.Sc">B.Sc</label>
+            <input type="radio" name="deg" id="B.Com" value="B.Com"><label for="B.Com">B.Com</label>
+            
+        </td>
+        <td id="errdeg"></td>
+    </tr>
+    <tr>
+        <td><label for="hobb">Hobbies</label></td>
+        <td>
+            <input type="checkbox" name="b=hobb" id="Sketching" value="Sketching"><label for="Sketching">Sketching</label>
+            <input type="checkbox" name="b=hobb" id="Sports" value="Sports"><label for="Sports">Sports</label>
+            <input type="checkbox" name="b=hobb" id="Swimming" value="Swimming"><label for="Swimming">Swimming</label>
+        </td>
+    </tr>
+    <tr>
+        <td><label for="State">State</label></td>
+        <td><select name="State" id="State">
+            <option value="N/A">select any</option>
+            <option value="Maharashtra">Maharashtra</option>
+            <option value="Karnataka">Karnataka</option>
+            <option value="Tamilnadu">Tamilnadu</option>
+            <option value="Andhra Pradesh">Andhra Pradesh</option>
+            <option value="Rajasthan">Rajasthan</option>
+        </select>
+        </td>
+    </tr>
+    <tr>
+        <td><label for="rseume">Resume</label></td>
+        <td><input type="file" name="resume" id="resume"></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>
+            <button type="submit" name="submit" id="submit" value="submit" >Submit</button>
+            <button type="reset" name="reset" id="reset" value="reset">Reset</button>
+        </td>
+    </tr>
+
+    </form>
+</table>
+</fieldset>
+</div> -->
+
+<section class="vh-100 bg-image"
+  style="background-image: url('https://mdbcdn.b-cdn.net/img/Photos/new-templates/search-box/img4.webp');">
+  <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+    <div class="container h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+          <div class="card" style="border-radius: 15px;">
+            <div class="card-body p-5">
+              <h2 class="text-uppercase text-center mb-5">Create an account</h2>
+
+              <form>
+
+                <div class="form-outline mb-4">
+                    <label class="form-label" for="form3Example1cg">Your Name</label>
+                  <input type="text" id="form3Example1cg" class="form-control form-control-lg" />
+                 
+                </div>
+
+                <div class="form-outline mb-4">
+                    <label class="form-label" for="form3Example3cg">Your Email</label>
+                  <input type="email" id="form3Example3cg" class="form-control form-control-lg" />
+                  
+                </div>
+
+                <div class="form-outline mb-4">
+                    <label class="form-label" for="form3Example4cg">Password</label>
+                  <input type="password" id="form3Example4cg" class="form-control form-control-lg" />
+                 
+                </div>
+
+                <div class="form-outline mb-4">
+                    <label class="form-label" for="form3Example4cdg">Repeat your password</label>
+                  <input type="password" id="form3Example4cdg" class="form-control form-control-lg" />
+                  
+                </div>
+
+                <div class="form-check d-flex justify-content-center mb-5">
+                  <input  type="checkbox" value="" id="form2Example3cg" onchange="enablereg()" />
+                  <label class="form-check-label" for="form2Example3g">
+                    I agree all statements in <a href="#!" class="text-body"><u>Terms of service</u></a>
+                  </label>
+                </div>
+
+                <div class="d-flex justify-content-center">
+                  <button type="button"
+                    class="btn btn-success btn-block btn-lg gradient-custom-4 text-body" id="reg" >Register</button>
+                </div>
+
+                <p class="text-center text-muted mt-5 mb-0">already have an account? <a href="/"
+                    class="fw-bold text-body"><u>Login here</u></a></p>
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</body>
+</html>

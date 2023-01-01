@@ -1,0 +1,205 @@
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+        <script src="./bootstrap-4.6.2-dist/js/bootstrap.js"></script>
+        <link rel="stylesheet" href="./bootstrap-4.6.2-dist/css/bootstrap.css"></link>
+    <style>
+        .carsimg{
+             position: relative; 
+             top: 0; 
+            height: 730px;
+            width: 1500px;
+            margin: 0;
+        }
+        #carmodel3{
+            position: relative;
+            top: 0;
+            height: 750px;
+            width: 1500px;
+            margin:0;
+            z-index: 2;
+        }
+        #carmodelX{
+            position: relative;
+            top: 0;
+            height: 750px;
+            width: 1500px;
+            margin:0;
+            z-index: 2;
+        }
+        #carmodelY{
+            position: relative;
+            top: 0;
+            height: 730px;
+            width: 1500px;
+            margin:0;
+            z-index: 2;
+        }
+
+
+        .logo{
+            position: fixed;
+            top: 10mm;
+        }
+        #img{
+            position: fixed;
+            top: 3mm;
+            left: 0;
+
+        }
+
+        #nav{
+            display: flex;
+            justify-content: space-between;
+           position:fixed;
+             /* color: black;
+            top: 8mm;
+            left: 33%;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;*/
+            z-index: 5;
+
+        }
+        #menu{
+            position: fixed;
+            top: 7.5mm;
+            right: 10mm;
+            font-family:Verdana, Geneva, Tahoma, sans-serif
+        }
+        #name{
+            font-size: 40;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            position: absolute;
+            top: 30mm;
+            left: 45%;
+        }
+
+        #CustomOrder{
+            position: absolute;
+            bottom: 20mm;
+            left: 35%;
+            width: 60mm;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            border-radius: 2mm;
+            color: white;
+            background-color: rgb(44, 42, 42);
+            background-color: rgb(44, 42, 42, 0.7);
+            height: 12mm;  
+            /* text-shadow: 1px 2px 3px black; */
+            animation-name: animation ;
+            border-color: rgb(44, 42, 42, 0.7);
+            border-width: 0;
+        }
+        #inventory{
+            position: absolute;
+            bottom: 20mm;
+            left: 55%;
+            width: 60mm;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            border-radius: 2mm;
+            color: rgb(6, 5, 5);
+            background-color: rgb(249, 247, 247);
+            background-color: rgba(249, 247, 247, 0.5);
+            height: 12mm;  
+            border-color: white;
+            border-width: 0;
+            box-shadow: 10px;
+            text-transform: capitalize;
+            
+        }
+        #model3{
+            height: 700px;
+            width: 1480px;
+        }
+        
+        #CustomOrder:hover{
+            transform: scale(1.1);
+        }
+        #inventory:hover{
+            transform: scale(1.1);
+        }
+        #ModelS:hover{
+            text-transform: capitalize;
+        }
+        #testdrive{
+            position: absolute;
+            top: 45mm;
+            left: 46%;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: black;
+        }
+        #container{
+            flex-direction: column;    
+        }
+        #modelS{
+            position: fixed;
+            margin-left: 45%;
+            z-index: 5;
+        }
+        #prod{
+            position: fixed;
+            top: 08mm;
+            left: 33%;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        #s:hover{
+            text-shadow: 1px, 2px, 3px, black;
+        }
+    </style>
+</head>
+<body id="body">
+<div id="container">
+    <div class="carsimg">
+        <img src="./Model S.jpg"  style="height:101%; width: 101.5%; object-fit: cover;">
+        <div>
+            <span id="name">Model S</span>
+            <a href="" id="testdrive" style="text-decoration: none ;"><span >Secure test drive</span></a>
+            <a href="https://www.tesla.com/model3"><button type="button" id="CustomOrder" onclick="">Custom Order</button></a>
+            <a href=""><button type="button" id="inventory" onclick="">Existing Inventory</button></a>
+    </div>
+    <div id="carmodel3"> 
+        <img src="./Model_3.jpg" style="height:105%; width: 101.5%; object-fit: cover;" >
+        <div>
+            <span id="name">Model E</span>
+            <a href="" id="testdrive" style="text-decoration: none ;"><span >Secure test drive</span></a>
+            <a href="https://www.tesla.com/model3"><button type="button" id="CustomOrder" onclick="">Custom Order</button></a>
+            <a href=""><button type="button" id="inventory" onclick="">Existing Inventory</button></a>
+    </div>
+    </div>
+    <div id="carmodelX">
+        <img src="./Model X.jpg" style="height:105%; width: 101.5%; object-fit: cover;">
+        <div>
+            <span id="name">Model X</span>
+            <a href="" id="testdrive" style="text-decoration: none ;"><span >Secure test drive</span></a>
+            <a href="https://www.tesla.com/model3"><button type="button" id="CustomOrder" onclick="">Custom Order</button></a>
+            <a href=""><button type="button" id="inventory" onclick="">Existing Inventory</button></a>
+    </div>
+        
+    </div>
+    <div id="carmodelY">
+        <img src="./ModelY.jpg" style="height:105%; width: 101.5%; object-fit: cover;">
+        <div>
+            <span id="name">Model Y</span>
+            <a href="" id="testdrive" style="text-decoration: none ;"><span >Secure test drive</span></a>
+            <a href="https://www.tesla.com/model3"><button type="button" id="CustomOrder" onclick="">Custom Order</button></a>
+            <a href=""><button type="button" id="inventory" onclick="">Existing Inventory</button></a>
+    </div>
+        
+    </div>
+</div>
+        <table id="nav">
+        <tr>
+        <td><img  id="img" src="./tesla-logo.png" height="60mm" width="225mm"></td>
+        <td id="prod"><span><a style="text-decoration: none; color: black;" href="https://www.tesla.com/models">Model S</a></span>&nbsp;&nbsp;&nbsp;<span><a style="text-decoration: none; color: black;" href="https://www.tesla.com/model3" >Model E</a></span>&nbsp;&nbsp;&nbsp; <span><a style="text-decoration: none; color: black;" href="" >Model X</a></span>&nbsp;&nbsp;&nbsp;<span><a style="text-decoration: none; color: black;" href="https://www.tesla.com/modely" >Model Y</a></span>&nbsp;&nbsp;&nbsp;<span><a style="text-decoration: none; color: black;" href="https://www.tesla.com/solarroof" >Solar Roof</a></span>&nbsp;&nbsp;&nbsp;<span><a style="text-decoration: none; color: black;" href="https://www.tesla.com/solarpanels" >Solar Panels</a></span></td>
+        <td id="menu"><span ><a style="text-decoration: none; color: black;" href="">Shop</a></span>&nbsp;&nbsp;&nbsp;<span><a style="text-decoration: none; color: black;" href="" >Account</a></span>&nbsp;&nbsp;&nbsp; <span><a style="text-decoration: none; color: black;" href="" >Menu</a></span>
+        </td>
+        </tr>
+    
+    <!-- <p id="menu">
+        <span ><a style="text-decoration: none; color: black;" href="">Shop</a></span>&nbsp;&nbsp;&nbsp;<span><a style="text-decoration: none; color: black;" href="" >Account</a></span>&nbsp;&nbsp;&nbsp; <span><a style="text-decoration: none; color: black;" href="" >Menu</a></span>
+    </p> -->
+</table>
+<br>
+
+</div>
+</body>
+</html>
