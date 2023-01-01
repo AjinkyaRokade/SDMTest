@@ -22,4 +22,4 @@ app.get("/register", (req, resp)=>{
 })
 
 app.listen(3000);
-console.log("asdfh.");
+console.log("serever running on 3000");
